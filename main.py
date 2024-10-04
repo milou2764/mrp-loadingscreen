@@ -15,7 +15,7 @@ def css(fp):
 
 @app.route('/css/<path:fp>.ttf')
 def ttf(fp):
-    return open('css/'+fp+'.ttf').read(), {"Content-Type": "font/ttf"}
+    return open('css/'+fp+'.ttf', 'rb').read(), {"Content-Type": "font/ttf"}
 
 @app.route('/backgrounds/<path:fp>.jpg')
 def imgs(fp):
